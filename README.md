@@ -1,15 +1,23 @@
-# Fabric Example Mod - Kotlin
+# Dynamic Storage
 
-## Setup
+Bringing mass storage fabric!
 
-0. Create a new mod repository by pressing the "Use this template" button and clone the created repository.
+## How to setup a storage network
 
-1. Import build.gradle file with IntelliJ IDEA
+Place a controller in the world, there can only be one controller in a network.
+Place sealed storage bins in the world, connected to the network.
+Connect an access point to the network.
+Items can now be deposited or retrieved in the storage bins using the access point.
 
-2. Edit build.gradle and mod.json to suit your needs.
-    * The "mixins" object can be removed from mod.json if you do not need to use mixins.
-    * Please replace all occurences of "modid" with your own mod ID - sometimes, a different string may also suffice.
-3. Run!
+## Automation
+Items can enter into the network via a consumer which will suck items out of connected inventories.
+Items can exit the network via providers which will push an item (specified in the provider UI) into connected inventories.
+Consumers and Providers can be controlled using redstone.
+
+## Power
+If enabled in config, the controller may require tech reborn power (if tech reborn is also installed)
+If playing without other compatiable mods, a powered furnace may be required adjacent to the controller or connected using insulated heat pipes.
+The recipe for the controller can be changed to reflect the modpack's chosen method of powering the network
 
 ## License
 
